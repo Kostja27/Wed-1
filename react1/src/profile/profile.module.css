@@ -1,0 +1,14 @@
+.content{
+    grid-area: c;
+    border: lemonchiffon solid 1px;
+    border-radius: 1px;
+}
+.img1 img{
+    width:100px;
+    height: 100px;
+}
+.img2 img{
+    width:20%;
+    height: 70px;
+}
+

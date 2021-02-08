@@ -1,0 +1,10 @@
+.d1{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+.mess{ color: firebrick;
+ 
+}
+.name{
+ color: gainsboro;
+}

@@ -1,0 +1,12 @@
+.app-Wrap{
+    display: grid;
+     grid-template-areas:
+         "h h "
+         "n c ";
+ grid-template-rows: 150px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  background-image:url(https://content.skyscnr.com/m/1b51182679225810/original/GettyImages-147444574_doc.jpg?resize=1800px:1800px&quality=100);
+  height: 1200px;
+}
+

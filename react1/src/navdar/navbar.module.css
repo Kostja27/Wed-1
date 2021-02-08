@@ -1,0 +1,12 @@
+.nav{
+    grid-area: n;
+    border: solid floralwhite 1px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+.na{
+    color: paleturquoise;
+    text-decoration: none;
+}
