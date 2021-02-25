@@ -1,7 +1,7 @@
 import React from 'react';
-import MyPost from './my post/mypost';
+import MyPostcontener from './my post/mypostcontener';
 import s from './profile.module.css';
-let Profily = ()=>{
+let Profily = (props)=>{debugger;
     return ( 
         <div className={s.content}>
                    <div className={s.img1}>  
@@ -13,9 +13,11 @@ let Profily = ()=>{
                     <img src="https://dinozoopasaule.lv/ru/getimage/uploads/news/ikkXHS-2AesJFyftXGg2mEg82YscHLdd.png?w=600&h=400&fit=crop"/>
                     </div>
                     </div>
-                   <MyPost />
+                   <MyPostcontener  />
                 </div>
     )
 }
 
 export default Profily;
+// MMerr={props.state.MMerr} dispatch={props.dispatch} 
+//                    PostText={props.state.PostText}
