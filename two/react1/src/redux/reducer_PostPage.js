@@ -1,5 +1,9 @@
+import { UserAp } from "../Api/api"
+
 const ADD_POST="addpost"
 const UPP_POST="uppost"
+const  Set_user_profile="SetUserProfile"
+
 let initialState={
     MMerr:[
     {mess:"hrte", id:1},
@@ -8,6 +12,8 @@ let initialState={
     {mess:"2regre", id:4},
     {mess:"2regre", id:5}],
     PostText:"Добавь пост",
+    profile:null,
+
 }
  const postpage_reducer=(Mas=initialState,action)=>{
      switch (action.type) {
@@ -23,10 +29,22 @@ let initialState={
 case UPP_POST: 
  return{...Mas,
     PostText:action.PostText}
+case Set_user_profile: 
+return{...Mas,profile:action.profile
+}
 default:
     return Mas;}
 }
 export const action_creator_addpost=()=> ({type:"addpost"})
 export const action_creator_uppost=(text)=>({type:"uppost", PostText:text})
-
+export const Setuserprofile=(profile)=> ({type:"SetUserProfile",profile})
 export default  postpage_reducer;
+
+
+export const Profiler=(userId)=>{
+    return(dispatch)=>UserAp.Profiler(userId)
+        .then(response=>{
+            dispatch(Setuserprofile(response.data));}
+        )
+     
+    }

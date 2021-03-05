@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from "./Dialog.module.css";
-import {action_creator_addmess, action_creator_uptext } from "..//../redux/reducer_Dialog";
 
 let Dialog=(props)=>{
     let PostMess=React.createRef()
