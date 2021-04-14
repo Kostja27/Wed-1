@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import s from "./Dialog.module.css";
 
 let Dialog=(props)=>{
@@ -12,7 +12,6 @@ let Dialog=(props)=>{
 
 let tialogg= props.Data.tialogData.map((t)=><Tialog name={t.name} id={t.id}/>)
 let messelem= props.Data.messData.map((m)=> <Mess mess={m.mess} id={m.id}/>)
-    
     return( <div className={s.d1} >
                 <div className={s.name}>
                 {tialogg}

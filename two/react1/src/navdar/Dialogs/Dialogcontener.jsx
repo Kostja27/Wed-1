@@ -1,20 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { withAuthRedicer } from '../../Hoc/authRedicer';
 import {action_creator_addmess, action_creator_uptext } from "../../redux/reducer_Dialog";
 import Dialog from './Dialog';
+
+class Dialogs extends React.Component{
+    render(){
+        return <Dialog {...this.props} />
+    }
+}
 
 
 let mapStateToProps=(state)=>{
     return{ 
-        Data: state.DialogPage 
+        Data: state.DialogPage,
     }
     }
-    let mapDispatchToProps=(dispatch)=>{
-        return{
-            addmess: ()=>{dispatch(action_creator_addmess())},
-            uptext: (text)=>{dispatch(action_creator_uptext(text))}
-        }  
-    }
-
-    const Dialogcontener=connect(mapStateToProps,mapDispatchToProps)(Dialog)
+    const Dialogcontener= compose(connect(mapStateToProps,{addmess:action_creator_addmess, uptext:action_creator_uptext}),withAuthRedicer)(Dialogs)
 export default Dialogcontener;

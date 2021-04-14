@@ -10,6 +10,7 @@ let FirstState={
     login:null,
     isAuth:false,
     
+    
 }
 const authLog=(State=FirstState,action)=>{
 switch (action.type) {

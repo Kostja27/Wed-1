@@ -2,6 +2,7 @@ import React from 'react';
 import Prelouder from '../Prelouder.jsx/1';
 import MyPostcontener from './my post/mypostcontener';
 import s from './profile.module.css';
+import ProfileStatus from './ProfileStatus';
 let Profily = (props)=>{
     if(!props.profile){return <Prelouder/>}
     return ( 
@@ -10,12 +11,12 @@ let Profily = (props)=>{
                        <img src="https://content.skyscnr.com/m/1b51182679225810/original/GettyImages-147444574_doc.jpg?resize=1800px:1800px&quality=100"/>
                     </div>
                     <div className={s.ava_descript}>
-                        ava+descript
+                        <ProfileStatus status={props.status} UpdateStat={props.UpdateStat}  />
                         <div className={s.img2}>  
                     <img src={props.profile.photos.large}/>
                     </div>
                     </div>
-                    <MyPostcontener/>
+                    <MyPostcontener />
                 </div>
     )
 }

@@ -16,6 +16,9 @@ let Nav = (props)=>{
         <NavLink to="/Musics"className={s.na}>music</NavLink> 
     </div>
     <div>
+        <NavLink to="/Game"className={s.na}>Games</NavLink> 
+    </div>
+    <div>
         <NavLink to="/Setting"className={s.na}>Settings</NavLink> 
     </div>
     <div >

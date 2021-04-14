@@ -1,3 +1,19 @@
-.d1{
+.d1{ display:  grid;
+    grid-template-areas:" p1 p2 p3";
     font-size: 20px;
+
+}
+.td1{ grid-area: p1;
+
+}
+.td2{ grid-area: p2;
+  
+}
+.td3{grid-area: p3;
+  
+    
+}
+.b1{
+    height: 20px;
+    width: 40px;
 }

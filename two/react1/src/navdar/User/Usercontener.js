@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { followAC, setpage, setusers, unfollowAC,set_Totalcount, Fetch, Following_In, GETuser,follow,unfollow } from '../../redux/reducer_users';
+import {  setpage, GETuser,follow,unfollow } from '../../redux/reducer_users';
 import User from './user';
 import Prelouder from "..//../Prelouder.jsx/1"
-import {UserAp} from "../.././Api/api"
+import { withAuthRedicer } from '../../Hoc/authRedicer';
+import { compose } from 'redux';
 
 class UserApi extends React.Component{
   constructor(props){
@@ -38,7 +39,5 @@ return{
     isFetching:state.User.isFetching,
     followingInProgres:state.User.followingInProgres
 }}
-
-
-let Usercontener=connect(mapStateToProps,{setpage, GETuser,follow,unfollow})(UserApi)
+let Usercontener=compose(connect(mapStateToProps,{setpage, GETuser,follow,unfollow}),withAuthRedicer)(UserApi)
 export default Usercontener

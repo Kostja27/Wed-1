@@ -1,0 +1,47 @@
+.game{
+    display: grid;
+    grid-template-columns:100px  auto 275px;
+    grid-template-rows: 30px 400px 400px ;
+    grid-template-areas:"a a  c " 
+                        "b d  c" 
+                        "b d  c" 
+
+}
+.attributes{ grid-area: a;
+    background-image: url(https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg) ;
+    border-radius: 2px;
+    border-color: black;
+    font-size: 20px;
+    text-align: center;
+    font-style: oblique;
+}
+.menu{
+    grid-area: b;
+}
+.ava{background-image:url(https://www.ejin.ru/wp-content/uploads/2018/08/kak-narisovat-kostyum-karandashom-poe-tapno-4-528x704.jpg) ;
+    grid-area: c;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.nav{ width: 90px;
+    height: 40px;
+    border: solid rgb(199, 197, 196) 1px;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    background-image:url(https://i8.rozetka.ua/goods/17176786/175653710_images_17176786845.jpg) ;
+}
+.href{
+    text-decoration: none;
+    color:rgb(197, 218, 204);
+    font-size: 20px;
+}
+path{
+    grid-area: d;
+    background-image: url(https://images.wallpaperscraft.ru/image/tekstura_fon_tekst_simvoly_50473_1920x1080.jpg);
+}
+.nav_work{
+    color: aquamarine;
+}
+
+

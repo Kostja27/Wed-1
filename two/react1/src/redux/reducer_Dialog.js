@@ -31,6 +31,7 @@ const dialog_reducer=(Mas=initialState,action)=>{
         default:
             return Mas;
     }}
+
     export const action_creator_addmess=()=> ({type:"addmess"})
     export const action_creator_uptext=(text)=> ({type:"uptext", MesText:text})
     export default   dialog_reducer;

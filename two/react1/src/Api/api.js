@@ -1,5 +1,5 @@
 import *as axios from 'axios';
-import { Profiler } from 'react';
+
 
 const instance=axios.create({
     withCredentials:true,
@@ -19,8 +19,20 @@ export const UserAp={
             return instance.post(`/follow/${userid}`)
          },
         Profiler(userId){
-            return instance.get(`profile/`+userId)
+            return ProfileApi.Profiler(userId)
         }}
+
+export const ProfileApi={
+    Profiler(userId){
+        return instance.get(`profile/`+userId)
+    },
+    GetStatus(userId){
+        return instance.get(`profile/status/`+userId)
+    },
+    UpdateStatus (status){
+        return instance.put(`profile/status/`,{status:status})
+    },
+}
 export const authApi={
     me(){
         return instance.get(`auth/me`)
